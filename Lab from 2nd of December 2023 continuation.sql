@@ -23,6 +23,7 @@ select max(length) from film as max_duration;
 select avg(length) from film;
 
 -- 8. What's the average movie duration expressed in format (hours, minutes)?
+select date_format(sec_to_time(115.2720 * 60), "%H,%i");
 
 -- 9. How many movies longer than 3 hours?
 select count(film_id) from sakila.film where length > 180;
